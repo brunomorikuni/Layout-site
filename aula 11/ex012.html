@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual país você mora</title>
+</head>
+<body>
+    <h1>Qual pais vc mora ? </h1>
+    Digite o pais que vc mora : <input type="string" name="pais" id="pais">
+    <input type="button" value="Verificar Pais" onclick="verificar()">
+    <div id="cid">
+</body>
+<script>
+    function verificar(){
+        var pais = window.document.querySelector("input#pais")
+        var cid = window.document.querySelector("div#cid")
+        var pais = String(pais.value)
+        cid.innerHTML = `seu pais é <strong>${pais}</strong>`
+        
+    if(pais == "brasil"){
+        cid.innerHTML += `<p>Você é brasileiro</p>`
+    }else if(pais != "brasil"){
+        cid.innerHTML += `<p>Você é estranjeiro</p>`
+    }
+}
+    
+   
+</script>
+</html>
